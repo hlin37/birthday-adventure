@@ -1,0 +1,24 @@
+.music-button {
+  position: fixed;
+  z-index: 30;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 999px;
+  color: white;
+  background: rgba(12,20,23,.35);
+  backdrop-filter: blur(10px);
+  padding: .55rem .75rem;
+  cursor: pointer;
+}
+
+.music-button span { font-size: 1.15rem; }
+.music-button small {
+  font-size: .6rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .8;
+}

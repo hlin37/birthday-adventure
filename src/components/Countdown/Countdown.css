@@ -1,0 +1,122 @@
+.countdown-page {
+  min-height: 100svh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background:
+    url("/images/countdown-background.jpg") center center / cover no-repeat;
+}
+
+.countdown-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9,31,40,.10), rgba(7,25,31,.52));
+  pointer-events: none;
+}
+
+.countdown-overlay { position: absolute; inset: 0; }
+
+.countdown-content {
+  position: relative;
+  z-index: 2;
+  width: min(850px, 92vw);
+  text-align: center;
+  padding: 3rem 1.2rem;
+  text-shadow: 0 2px 24px rgba(0,0,0,.3);
+}
+
+.countdown-content h1 {
+  margin: .5rem 0 2rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 1.06;
+  font-weight: 500;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: clamp(.6rem, 3vw, 2rem);
+  margin: 2rem auto;
+}
+
+.time-unit {
+  min-width: 85px;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.time-unit strong {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 500;
+}
+
+.time-unit span {
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  opacity: .82;
+}
+
+.sweet-message {
+  font-family: "Caveat", cursive;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.25;
+  margin: 1.4rem 0;
+}
+
+.date-label {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  opacity: .72;
+}
+
+.adventure-button {
+  margin-top: 1.5rem;
+  border: 1px solid rgba(255,255,255,.55);
+  color: white;
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(12px);
+  padding: .9rem 1.3rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform .25s, background .25s;
+}
+
+.adventure-button:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,.2);
+}
+
+@media (max-width: 560px) {
+  .countdown-grid { gap: .2rem; }
+  .time-unit { min-width: 65px; }
+  .time-unit strong { font-size: 1.8rem; }
+  .time-unit span { font-size: .55rem; }
+}
+
+/* TEMPORARY DEVELOPMENT CONTROL
+   Remove this block when the birthday card is ready to publish. */
+.skip-button {
+  margin-top: 1.25rem;
+  display: inline-block;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,.72);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity .2s, transform .2s;
+}
+
+.skip-button:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,191 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap");
+
+:root {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: #f7f3ed;
+  background: #12252d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #12252d; }
+button { font: inherit; }
+img { display: block; max-width: 100%; }
+
+main { overflow: hidden; }
+
+.story-section {
+  position: relative;
+  min-height: 100vh;
+}
+
+.eyebrow {
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  opacity: .7;
+}
+
+.scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  font-size: .78rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  opacity: .72;
+  animation: breathe 2.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  50% { transform: translate(-50%, -7px); opacity: 1; }
+}
+
+@media (max-width: 700px) {
+  .scroll-cue { bottom: 1.2rem; }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap");
+
+/* =========================================================
+   COLOUR JOURNEY
+   Light green → deep purple
+   ========================================================= */
+
+:root {
+  --journey-1: #eef5e3;   /* hero      – lightest green */
+  --journey-2: #d3e6bd;   /* hero end  – soft green     */
+  --journey-3: #a9cfa0;   /* gift end  – mid green      */
+  --journey-4: #74a396;   /* timeline  – sage teal      */
+  --journey-5: #3f6f6b;   /* timeline  – deep teal      */
+  --journey-6: #57497f;   /* letter    – violet         */
+  --journey-7: #3d2b60;   /* letter    – deep purple    */
+
+  --ink-dark: #23372c;
+  --ink-light: #f7f3ed;
+
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--ink-light);
+  background: var(--journey-7);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--journey-7);
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  overflow: hidden;
+}
+
+/* Full-page gradient fallback / continuous journey */
+#birthday-page {
+  background: linear-gradient(
+    180deg,
+    var(--journey-1) 0%,
+    var(--journey-2) 18%,
+    var(--journey-3) 36%,
+    var(--journey-4) 55%,
+    var(--journey-5) 72%,
+    var(--journey-6) 88%,
+    var(--journey-7) 100%
+  );
+}
+
+.story-section {
+  position: relative;
+  min-height: 100vh;
+}
+
+.eyebrow {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  opacity: 0.7;
+}
+
+.scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.72;
+  animation: breathe 2.4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  50% {
+    transform: translate(-50%, -7px);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   LETTER — final purple stop
+   Works even if your Letter component uses a different class.
+   ========================================================= */
+
+#birthday-page > section:last-child,
+.letter-section {
+  background: linear-gradient(
+    180deg,
+    var(--journey-5) 0%,
+    var(--journey-6) 55%,
+    var(--journey-7) 100%
+  );
+}
+
+.letter-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  color: var(--ink-light);
+}
+
+.letter-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 500;
+  margin: 0 0 1rem;
+}
+
+.letter-section p {
+  max-width: 620px;
+  line-height: 1.9;
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .scroll-cue {
+    bottom: 1.2rem;
+  }
+}

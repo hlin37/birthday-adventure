@@ -1,0 +1,261 @@
+/* =========================================================
+   BIRTHDAY HERO
+   Light green start of the colour journey
+   ========================================================= */
+
+.birthday-hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    180deg,
+    var(--journey-1) 0%,
+    #e2efd0 55%,
+    var(--journey-2) 100%
+  );
+
+  color: var(--ink-dark);
+}
+
+/* =========================================================
+   CENTER TEXT
+   ========================================================= */
+
+.hero-copy {
+  position: relative;
+  z-index: 20;
+  width: min(520px, 90vw);
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-copy .eyebrow {
+  margin-bottom: 1rem;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.95;
+}
+
+.hero-copy > p:last-child {
+  margin-top: 1.5rem;
+}
+
+/* =========================================================
+   PHOTOS
+   ========================================================= */
+
+.hero-photo {
+  position: absolute;
+  width: clamp(130px, 13vw, 210px);
+  aspect-ratio: 3 / 4;
+  z-index: 10;
+  padding: 7px;
+  background: white;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.20);
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  will-change: transform;
+}
+
+/* =========================================================
+   LEFT SIDE
+   ========================================================= */
+
+.hero-photo-left-1 {
+  left: 8%;
+  top: 24%;
+}
+
+.hero-photo-left-2 {
+  left: 3%;
+  top: 48%;
+}
+
+.hero-photo-left-3 {
+  left: 13%;
+  bottom: 8%;
+}
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.hero-photo-right-1 {
+  right: 8%;
+  top: 24%;
+}
+
+.hero-photo-right-2 {
+  right: 3%;
+  top: 48%;
+}
+
+.hero-photo-right-3 {
+  right: 13%;
+  bottom: 8%;
+}
+
+/* =========================================================
+   ORB
+   ========================================================= */
+
+.hero-orb {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(30px);
+  opacity: 0.55;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+/* =========================================================
+   SCROLL CUE
+   ========================================================= */
+
+.scroll-cue {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  opacity: 0.75;
+  color: var(--ink-dark);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .hero-photo {
+    width: 135px;
+  }
+
+  .hero-photo-left-1 {
+    left: 5%;
+  }
+
+  .hero-photo-left-2 {
+    left: 1%;
+  }
+
+  .hero-photo-left-3 {
+    left: 8%;
+  }
+
+  .hero-photo-right-1 {
+    right: 5%;
+  }
+
+  .hero-photo-right-2 {
+    right: 1%;
+  }
+
+  .hero-photo-right-3 {
+    right: 8%;
+  }
+
+  .hero-copy {
+    width: min(460px, 70vw);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .birthday-hero {
+    min-height: 100svh;
+  }
+
+  .hero-photo {
+    width: 90px;
+    padding: 4px;
+  }
+
+  .hero-photo-left-1 {
+    left: 2%;
+    top: 18%;
+  }
+
+  .hero-photo-left-2 {
+    left: 1%;
+    top: 42%;
+  }
+
+  .hero-photo-left-3 {
+    left: 5%;
+    bottom: 13%;
+  }
+
+  .hero-photo-right-1 {
+    right: 2%;
+    top: 18%;
+  }
+
+  .hero-photo-right-2 {
+    right: 1%;
+    top: 42%;
+  }
+
+  .hero-photo-right-3 {
+    right: 5%;
+    bottom: 13%;
+  }
+
+  .hero-copy {
+    width: 68vw;
+    padding: 1rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.4rem, 10vw, 4rem);
+  }
+
+  .hero-copy > p:last-child {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 450px) {
+  .hero-photo {
+    width: 72px;
+  }
+
+  .hero-copy {
+    width: 72vw;
+  }
+}
