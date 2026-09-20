@@ -474,15 +474,15 @@ export default function BirthdayHero() {
       <div className="hero-orb" />
 
       <div className="hero-photo hero-photo-left-1">
-        <img src="/images/hero/photo1.png" alt="Memory 1" />
+        <img src="images/hero/photo1.png" alt="Memory 1" />
       </div>
 
       <div className="hero-photo hero-photo-left-2">
-        <img src="/images/hero/photo2.png" alt="Memory 2" />
+        <img src="images/hero/photo2.png" alt="Memory 2" />
       </div>
 
       <div className="hero-photo hero-photo-left-3">
-        <img src="/images/hero/photo3.png" alt="Memory 3" />
+        <img src="images/hero/photo3.png" alt="Memory 3" />
       </div>
 
       <div className="hero-copy">
@@ -499,15 +499,15 @@ export default function BirthdayHero() {
       </div>
 
       <div className="hero-photo hero-photo-right-1">
-        <img src="/images/hero/photo4.png" alt="Memory 4" />
+        <img src="images/hero/photo4.png" alt="Memory 4" />
       </div>
 
       <div className="hero-photo hero-photo-right-2">
-        <img src="/images/hero/photo5.png" alt="Memory 5" />
+        <img src="images/hero/photo5.png" alt="Memory 5" />
       </div>
 
       <div className="hero-photo hero-photo-right-3">
-        <img src="/images/hero/photo6.png" alt="Memory 6" />
+        <img src="images/hero/photo6.png" alt="Memory 6" />
       </div>
 
       <div className="scroll-cue">keep going ↓</div>

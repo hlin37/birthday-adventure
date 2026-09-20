@@ -5,13 +5,13 @@ export const achievements = [
   {
     year: "October 26, 2025",
     title: "Start of Dainty Wilder ASMR",
-    image: "/images/timeline/start.jpg",
+    image: "images/timeline/start.jpg",
     description: "My New Favorite ASMR Channel."
   },
   {
     year: "September 2, 2025",
     title: "Giving You A Tiffany Ring",
-    image: "/images/timeline/tiffany.png",
+    image: "images/timeline/tiffany.png",
     description: "A pretty ring for such a pretty soon-to-be wifey."
   },
   {
