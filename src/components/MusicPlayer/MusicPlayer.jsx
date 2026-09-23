@@ -31,7 +31,7 @@ export default function MusicPlayer({ audioRef }) {
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/background.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="/birthday-adventure/audio/background.mp3" loop preload="auto" />
       <button className="music-button" onClick={toggle} aria-label="Toggle music">
         <span>{playing ? "♫" : "♪"}</span>
         <small>{playing ? "music on" : "music off"}</small>
